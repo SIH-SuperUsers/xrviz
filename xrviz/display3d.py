@@ -33,7 +33,7 @@ class Display3d(SigSlot):
                         self.data['lon'][::skip_lon],
                         self.data['lat'][::skip_lat],
                         check_levs(self.levs_is_sorted,self.data['lev'][::skip_lev]),
-                        indexing='xy')
+                        indexing='ij')
 
         self.name = 'Variables 3D'
         self.select_var_3d = pn.widgets.Select(
