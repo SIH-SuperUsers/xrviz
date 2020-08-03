@@ -93,7 +93,9 @@ class Dashboard(SigSlot):
 
         self.panel = pn.Column(self.control.panel,
                                pn.Row(self.plot_button,
-                                      self.clear_series_button),
+                                      self.clear_series_button,
+                                      self.control.displayer3d.plot_button_3d),
+                               self.control.displayer3d.data_cube,
                                self.output,
                                self.series_graph, width_policy='max')
 

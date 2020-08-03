@@ -2,6 +2,7 @@ import panel as pn
 import xarray as xr
 from .sigslot import SigSlot
 from .display import Display
+from .display3d import Display3d
 from .describe import Describe
 from .fields import Fields
 from .style import Style
@@ -53,10 +54,12 @@ class Control(SigSlot):
         super().__init__()
         self.data = data
         self.displayer = Display(self.data)
+        self.displayer3d = Display3d(self.data)
         self.describer = Describe(self.data)
         self.fields = Fields(self.data)
         self.style = Style()
         self.coord_setter = CoordSetter(self.data)
+
         self.tabs = pn.Tabs(
             pn.Column(
                 pn.pane.Markdown(TEXT, margin=(0, 10)),
@@ -67,6 +70,7 @@ class Control(SigSlot):
             self.coord_setter.panel,
             self.fields.panel,
             self.style.panel,
+            self.displayer3d.panel,
             background='#f5f5f5',
             width_policy='max',
             tabs_location='left',
