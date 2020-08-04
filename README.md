@@ -9,16 +9,24 @@
 XrViz is an interactive graphical user interface(GUI) for visually browsing Xarrays.
 You can view data arrays along various dimensions, examine data values, change
 color maps, extract series, display geographic data on maps and much more.
+
 It is built on [Xarray](http://xarray.pydata.org),
 [HvPlot](https://hvplot.pyviz.org) and [Panel](https://panel.pyviz.org/).
 It can be used with [Intake](http://intake.readthedocs.io/)
 to ease the process of investigating and loading datasets.
 
+This repository has extended [intake/xrviz](https://github.com/intake/xrviz) by including the option to have a volumetric rendering of the multi-dimensional datasets. The 3D interface has been developed as a prototype for the project `Web based volume rendering and 3D/4D visualization of Model Forecast (NM389-ISRO)` for [Indian Space Research Organisation](https://www.isro.gov.in/) as a part of [Smart India Hackathon 2020](https://www.sih.gov.in/). The specific dataset used can be found [here](https://drive.google.com/drive/folders/1U1aWB7Sm70sa8fzistfVXn3VGakf2J2U?usp=sharing). 
+
+The 3D rendering part has been developed jointly by [@hdsingh](https://github.com/hdsingh), [@rumeetsingh](https://github.com/rumeetsingh), [@SinghHrmn](https://github.com/SinghHrmn), [@sbjaj33](https://github.com/sbjaj33).
+
+
+<img src="https://raw.githubusercontent.com/SIH-SuperUsers/xrviz/master/docs/source/_static/images/interface3d.png" data-canonical-src="https://raw.githubusercontent.com/SIH-SuperUsers/xrviz/master/docs/source/_static/images/interface3d.png" width="800"/><br>
+
+<img src="https://raw.githubusercontent.com/intake/xrviz/master/docs/source/_static/images/dashboard.png" data-canonical-src="https://raw.githubusercontent.com/intake/xrviz/master/docs/source/_static/images/dashboard.png" width="800"/><br>
 
 Documentation is available at [Read the Docs](https://xrviz.readthedocs.io).
 Try it out on binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/intake/xrviz/master?filepath=examples%2Fgreat_lakes.ipynb)
 
-<img src="https://raw.githubusercontent.com/intake/xrviz/master/docs/source/_static/images/dashboard.png" data-canonical-src="https://raw.githubusercontent.com/intake/xrviz/master/docs/source/_static/images/dashboard.png" width="800"/><br>
 
 ### Installation
 
